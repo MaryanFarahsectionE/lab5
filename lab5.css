@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+    --background-color: #000;
+    --primary-color: #FF69B4;
+    --accent-color: #FFB6C1;
+    --text-color: #FFF;
+    --font-family: 'Shadows Into Light', cursive; 
+    --card-background: rgba(255, 105, 180, 0.2);
+    --border-radius: 15px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: url(black\ chetta.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header-title h1 {
+    font-size: 4.5rem;
+    color: var(--primary-color); 
+    margin: 20px 0 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.video-header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--primary-color);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.video-header video {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 30px 0;
+}
+#albums {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.album-card audio {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+}
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.album-card {
+    background: var(--card-background);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+}
+
+.album-card img {
+    width: 170px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--accent-color);
+}
+
+.album-card h3, .album-card p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.9rem;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-background);
+    border: 3px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 170px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+#contact {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 400px;
+    width: 100%;
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact form input,
+#contact form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+#contact form button {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color); 
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+#contact form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
